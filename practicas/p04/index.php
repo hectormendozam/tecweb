@@ -218,8 +218,23 @@
         echo '<br>';
         echo 'Valor de la variable $e: '.var_export($e, true); 
         echo '<br>';
+        unset($a, $b, $c, $d, $e, $f);
+    ?>
 
+    <h2>Ejercicio 7</h2>
+    <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <li>La versión de Apache y PHP</li>
+    <li>El nombre del sistema operativo (servidor)</li>
+    <li>El idioma del navegador (cliente).</li>
 
+    <?php
+        //AQUI VA MI CÓDIGO PHP
+        echo '<h4>Mostramos las versiones, nombre del OS e idioma del navegador: </h4>';
+        echo "Versión de Apache y PHP: " . $_SERVER['SERVER_SOFTWARE'];
+        echo '<br>';
+        echo "Sistema operativo del servidor: " . php_uname('s');
+        echo '<br>';
+        echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'];
     ?>
 </body>
 </html>
