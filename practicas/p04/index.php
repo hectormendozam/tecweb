@@ -67,5 +67,48 @@
         echo 'Respuesta: Lo que ocurrió al realizar las nuevas asignaciones es que la variable $b se convirtió en una referencia de la variable $a, por lo que al modificar el valor de $a a PHP server, también se modifica el valor de $b.'; 
         unset($a, $b, $c);
     ?>
+
+    <h2>Ejercicio 3</h2>
+    <p>Muestra el contenido de cada variable inmediatamente después de cada asignación, verificar la evolución del tipo de estas variables: </p>
+    <li>$a = “PHP5”;</li>
+    <li>$z[] = &$a;</li>
+    <li>$b = “5a version de PHP”;</li>
+    <li>$c = $b*10;</li>
+    <li>$a .= $b;</li>
+    <li>$b *= $c;</li>
+    <li>$z[0] = “MySQL”;</li>
+
+    <?php
+        //AQUI VA MI CÓDIGO PHP
+        echo '<h4>Mostramos cada variable o arreglo después de su asignación: </h4>';
+        $a = "PHP5";
+        var_dump($a);
+        echo '<br>';
+
+        $z[] = &$a;
+        print_r($z); 
+        echo '<br>';
+
+        $b = "5a version de PHP";
+        var_dump($b); 
+        echo '<br>';
+
+        $c = $b * 10; 
+        var_dump($c); 
+        echo '<br>';
+
+        $a .= $b; 
+        var_dump($a);
+        echo '<br>';    
+
+        $b *= $c;
+        var_dump($b);
+        echo '<br>';
+
+        $z[0] = "MySQL";
+        print_r($z);
+        echo '<br>';
+
+    ?>
 </body>
 </html>
