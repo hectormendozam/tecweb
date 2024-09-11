@@ -108,7 +108,7 @@
         $z[0] = "MySQL";
         print_r($z);
         echo '<br>';
-
+        unset($a, $b, $c, $z);
     ?>
 
     <h2>Ejercicio 4</h2>
@@ -151,7 +151,30 @@
         $GLOBALS['z'] = $z;
         print_r($GLOBALS['z']);
         echo '<br>';
+        unset($a, $b, $c, $z);
+    ?>
 
+    <h2>Ejercicio 5</h2>
+    <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <li>$a = “7 personas”;</li>
+    <li>$b = (integer) $a;</li>
+    <li>$a = “9E3”;</li>
+    <li>$c = (double) $a;</li>
+
+    <?php
+        //AQUI VA MI CÓDIGO PHP
+        echo '<h4>Mostramos el valor de las variables $a, $b, $c al final del anterior script: </h4>';
+        $a = "7 personas";
+        $b = (integer) $a;
+        $a = "9E3";
+        $c = (double) $a;
+
+        echo '<ul>';
+        echo "<li>Variable a: $a</li>";
+        echo "<li>Variable b: $b</li>";
+        echo "<li>Variable c: $c</li>";
+        echo '</ul>';
+        unset($a, $b, $c);
     ?>
 </body>
 </html>
