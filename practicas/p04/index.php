@@ -29,6 +29,43 @@
         echo '<li>$_element1 es válida porque inicia con guión bajo.</li>';
         echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
         echo '</ul>';
+        unset($_myvar, $_7var, $myvar, $var7, $_element1);
+    ?>
+
+    <h2>Ejercicio 2</h2>
+    <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
+    <li>$a = “ManejadorSQL”;</li>
+    <li>$b = 'MySQL’;</li>
+    <li>$c = &$a;</li>
+    <?php
+        //AQUI VA MI CÓDIGO PHP
+        $a = "ManejadorSQL";
+        $b = 'MySQL';
+        $c = &$a;
+        
+        echo '<h4>Ahora muestra el contenido de cada variable:</h4>';
+        echo '<ul>';
+        echo "<li>Variable a: $a</li>";
+        echo "<li>Variable b: $b</li>";
+        echo "<li>Variable c: $c</li>";
+        echo '</ul>';
+
+        echo 'Realizamos las siguientes asignaciones:<br><br>';
+        echo '<li>$a = "PHP server";</li>';
+        echo '<li>$b = &$a;</li>';
+
+        $a = "PHP server";
+        $b = &$a;
+
+        echo '<h4>Volvemos a imprimir las variables después de haber realizado las nuevas asignaciones:</h4>';
+        echo '<ul>';
+        echo "<li>Variable a: $a</li>";
+        echo "<li>Variable b: $b</li>";
+        echo "<li>Variable c: $c</li>";
+        echo '</ul>';
+
+        echo 'Respuesta: Lo que ocurrió al realizar las nuevas asignaciones es que la variable $b se convirtió en una referencia de la variable $a, por lo que al modificar el valor de $a a PHP server, también se modifica el valor de $b.'; 
+        unset($a, $b, $c);
     ?>
 </body>
 </html>
