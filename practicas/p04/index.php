@@ -93,7 +93,7 @@
         var_dump($b); 
         echo '<br>';
 
-        $c = $b * 10; 
+        @ $c = $b * 10; 
         var_dump($c); 
         echo '<br>';
 
@@ -101,7 +101,7 @@
         var_dump($a);
         echo '<br>';    
 
-        $b *= $c;
+        @ $b *= $c;
         var_dump($b);
         echo '<br>';
 
