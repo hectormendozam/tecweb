@@ -21,6 +21,47 @@
         }
         }
     }
-    ?>
+
+    function generarImparParImpar(){
+        function esImpar($numero) {
+            return $numero % 2 != 0;
+        }
+    
+        function esPar($numero) {
+            return $numero % 2 == 0;
+        }
+    
+        $matriz = [];
+        $iteraciones = 0;
+        $totalNumerosGenerados = 0;
+    
+        do {
+            $iteraciones++;
+    
+            $num1 = rand(1, 100);  
+            $num2 = rand(1, 100);
+            $num3 = rand(1, 100);
+    
+            $matriz[] = [$num1, $num2, $num3];
+    
+            $totalNumerosGenerados += 3;
+    
+            // echo "Iteración $iteraciones: [$num1, $num2, $num3]". '<br>';
+    
+        } while (!(esImpar($num1) && esPar($num2) && esImpar($num3))); 
+    
+        echo "\n¡Secuencia impar, par, impar encontrada!". '<br>';
+        echo "Número total de iteraciones: $iteraciones". '<br>';
+        echo "Cantidad total de números generados: $totalNumerosGenerados". '<br>';
+    
+        echo "\nMatriz de números generados:". '<br>';
+        foreach ($matriz as $fila) {
+            echo "[" . implode(", ", $fila) . "]". '<br>';
+        }
+    }
+
+    function
+    
+?>
 </body>
 </html>
