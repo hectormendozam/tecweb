@@ -8,10 +8,6 @@
 <body>
     <h2>Ejercicio 1</h2>
     <p>Escribir programa para comprobar si un número es un múltiplo de 5 y 7</p>
-    <form> 
-        <input type="text" name="numero" placeholder="Ingrese un número">
-        <input type="submit" value="Comprobar">
-    </form>
     <?php
     include 'funciones.php';
         esMultiplo(0);
@@ -27,6 +23,21 @@
     <?php
         generarImparParImpar();
     ?>
+
+    <h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+    pero que además sea múltiplo de un número dado.</p>
+    <form> 
+        <input type="text" name="number" placeholder="Ingrese un número">
+        <input type="submit" value="Encontrar número al azar que sea múltiplo">
+    </form>
+    <?php        
+        esMultiploAleatorio();
+    ?>
+
+    <h2>Ejercicio 3</h2>
+    <p>Utiliza un ciclo while para encontrar el primer número entero obtenido aleatoriamente,
+    pero que además sea múltiplo de un número dado.</p>
 
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">

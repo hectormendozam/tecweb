@@ -50,9 +50,8 @@
     
         } while (!(esImpar($num1) && esPar($num2) && esImpar($num3))); 
     
-        echo "\n¡Secuencia impar, par, impar encontrada!". '<br>';
         echo "Número total de iteraciones: $iteraciones". '<br>';
-        echo "Cantidad total de números generados: $totalNumerosGenerados". '<br>';
+        echo "Cantidad total de números generados: $totalNumerosGenerados". '<br>'. '<br>';
     
         echo "\nMatriz de números generados:". '<br>';
         foreach ($matriz as $fila) {
@@ -60,7 +59,33 @@
         }
     }
 
-    function
+    function esMultiploAleatorio(){
+        if (isset($_GET['number']) && $_GET['number'] != 0) {
+        while (true){
+            $random = rand(1, 100);
+            if ($random % $_GET['number'] == 0){
+                echo 'El número aleatorio '. $random .' es múltiplo de ' . $_GET['number'];
+                break;
+            }
+        }
+    }
+    };
+
+    function esMultiploAleatoriov2(){
+        if (isset($_GET['number']) && $_GET['number'] != 0) {
+        do {
+            $random = rand(1, 100);
+            if ($random % $_GET['number'] == 0){
+                echo 'El número aleatorio ' . $random . ' es múltiplo de ' . $_GET['number'];
+                break;
+            }
+        } while (rand(1, 100) % $_GET['number'] !== 0);
+    }
+    };
+
+    function () {
+        
+    };
     
 ?>
 </body>
