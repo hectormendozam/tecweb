@@ -46,6 +46,23 @@
         numerosASCII();
     ?>
 
+    <h2>Ejercicio 6 - Formulario de Edad y Sexo</h2>
+    <form action="http://localhost/tecweb/practicas/p06/index.php" method="POST">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required><br><br>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    <?php
+        formularioEdadSexo();
+    ?>
+
     <h2>Ejemplo de POST</h2>
     <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">
         Name: <input type="text" name="name"><br>

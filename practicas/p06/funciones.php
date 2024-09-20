@@ -89,7 +89,6 @@
             $arreglo[$i] = chr($i);
         }
 
-        // Crear la tabla XHTML
         echo "<table border='1'>";
         echo "<tr><th>Índice</th><th>Valor</th></tr>";
 
@@ -99,6 +98,34 @@
 
         echo "</table>";
     };
+
+    function formularioEdadSexo(){
+        if (isset($_POST['edad']) && isset($_POST['sexo'])) {
+            // Obtener los valores enviados por el formulario
+            $edad = $_POST['edad'];
+            $sexo = $_POST['sexo'];
+        
+            // Generar la respuesta en XHTML
+            echo '<?xml version="1.0" encoding="UTF-8"?>';
+            echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">';
+            echo '<html xmlns="http://www.w3.org/1999/xhtml">';
+            echo '<head><title>Respuesta</title></head>';
+            echo '<body>';
+        
+            // Validar las condiciones
+            if ($sexo == 'femenino' && $edad >= 18 && $edad <= 35) {
+                echo '<h2>Bienvenida, usted está en el rango de edad permitido.</h2>';
+            } else {
+                echo '<h2>Lo siento, usted no cumple con los criterios de acceso.</h2>';
+            }
+        
+            echo '</body>';
+            echo '</html>';
+            } else {
+                // En caso de que no se reciban los datos
+                echo '<h2>Error: No se recibieron los datos del formulario.</h2>';
+            }
+    }
     
 ?>
 </body>
