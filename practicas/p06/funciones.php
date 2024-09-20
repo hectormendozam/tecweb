@@ -64,7 +64,7 @@
         while (true){
             $random = rand(1, 100);
             if ($random % $_GET['number'] == 0){
-                echo 'El número aleatorio '. $random .' es múltiplo de ' . $_GET['number'];
+                echo 'El número generado aleatoriamente '. $random .' es múltiplo de ' . $_GET['number'];
                 break;
             }
         }
@@ -76,15 +76,28 @@
         do {
             $random = rand(1, 100);
             if ($random % $_GET['number'] == 0){
-                echo 'El número aleatorio ' . $random . ' es múltiplo de ' . $_GET['number'];
+                echo 'El número generado aleatoriamente ' . $random . ' es múltiplo de ' . $_GET['number'];
                 break;
             }
         } while (rand(1, 100) % $_GET['number'] !== 0);
     }
     };
 
-    function () {
-        
+    function numerosASCII() {
+        $arreglo = array();
+        for ($i = 97; $i <= 122; $i++) {
+            $arreglo[$i] = chr($i);
+        }
+
+        // Crear la tabla XHTML
+        echo "<table border='1'>";
+        echo "<tr><th>Índice</th><th>Valor</th></tr>";
+
+        foreach ($arreglo as $key => $value) {
+            echo "<tr><td>$key</td><td>$value</td></tr>";
+        }
+
+        echo "</table>";
     };
     
 ?>
