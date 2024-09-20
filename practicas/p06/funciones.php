@@ -125,7 +125,239 @@
                 // En caso de que no se reciban los datos
                 echo '<h2>Error: No se recibieron los datos del formulario.</h2>';
             }
+    };
+
+    function registroAutos(){
+
+    // Arreglo con los 15 autos registrados
+    $parque_vehicular = array(
+        'ABC1234' => array(
+            'Auto' => array(
+                'marca' => 'Toyota',
+                'modelo' => 2020,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Juan Pérez',
+                'ciudad' => 'Ciudad de México',
+                'direccion' => 'Av. Insurgentes Sur 123'
+            )
+        ),
+        'DEF5678' => array(
+            'Auto' => array(
+                'marca' => 'Honda',
+                'modelo' => 2018,
+                'tipo' => 'camioneta'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Ana Gómez',
+                'ciudad' => 'Guadalajara',
+                'direccion' => 'Calle Libertad 45'
+            )
+        ),
+        'GHI9123' => array(
+            'Auto' => array(
+                'marca' => 'Mazda',
+                'modelo' => 2019,
+                'tipo' => 'hatchback'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Carlos López',
+                'ciudad' => 'Monterrey',
+                'direccion' => 'Calle Zaragoza 789'
+            )
+        ),
+        'JKL4567' => array(
+            'Auto' => array(
+                'marca' => 'Ford',
+                'modelo' => 2017,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Laura Méndez',
+                'ciudad' => 'Puebla',
+                'direccion' => 'Av. Reforma 45'
+            )
+        ),
+        'MNO7890' => array(
+            'Auto' => array(
+                'marca' => 'Chevrolet',
+                'modelo' => 2021,
+                'tipo' => 'camioneta'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Luis García',
+                'ciudad' => 'Toluca',
+                'direccion' => 'Calle Independencia 78'
+            )
+        ),
+        'PQR3456' => array(
+            'Auto' => array(
+                'marca' => 'Volkswagen',
+                'modelo' => 2016,
+                'tipo' => 'hatchback'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Sofía Martínez',
+                'ciudad' => 'León',
+                'direccion' => 'Calle del Sol 32'
+            )
+        ),
+        'STU5678' => array(
+            'Auto' => array(
+                'marca' => 'Nissan',
+                'modelo' => 2019,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Miguel Sánchez',
+                'ciudad' => 'Querétaro',
+                'direccion' => 'Blvd. Bernardo Quintana 123'
+            )
+        ),
+        'VWX9012' => array(
+            'Auto' => array(
+                'marca' => 'Kia',
+                'modelo' => 2020,
+                'tipo' => 'camioneta'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Patricia Ramírez',
+                'ciudad' => 'Mérida',
+                'direccion' => 'Calle 60 450'
+            )
+        ),
+        'YZA1234' => array(
+            'Auto' => array(
+                'marca' => 'Hyundai',
+                'modelo' => 2022,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Gabriel Torres',
+                'ciudad' => 'Cancún',
+                'direccion' => 'Av. Tulum 20'
+            )
+        ),
+        'BCD5678' => array(
+            'Auto' => array(
+                'marca' => 'Renault',
+                'modelo' => 2015,
+                'tipo' => 'hatchback'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Fernanda Castro',
+                'ciudad' => 'Tijuana',
+                'direccion' => 'Calle Revolución 90'
+            )
+        ),
+        'EFG9012' => array(
+            'Auto' => array(
+                'marca' => 'Jeep',
+                'modelo' => 2021,
+                'tipo' => 'camioneta'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Roberto Flores',
+                'ciudad' => 'Ciudad Juárez',
+                'direccion' => 'Blvd. Zaragoza 230'
+            )
+        ),
+        'HIJ2345' => array(
+            'Auto' => array(
+                'marca' => 'Fiat',
+                'modelo' => 2018,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Valeria Aguilar',
+                'ciudad' => 'Puebla',
+                'direccion' => 'Calle 14 Sur 123'
+            )
+        ),
+        'KLM6789' => array(
+            'Auto' => array(
+                'marca' => 'Peugeot',
+                'modelo' => 2017,
+                'tipo' => 'hatchback'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Mauricio Rodríguez',
+                'ciudad' => 'Morelia',
+                'direccion' => 'Calle Madero 56'
+            )
+        ),
+        'NOP1234' => array(
+            'Auto' => array(
+                'marca' => 'Audi',
+                'modelo' => 2020,
+                'tipo' => 'camioneta'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Daniela Morales',
+                'ciudad' => 'Monterrey',
+                'direccion' => 'Av. Constitución 105'
+            )
+        ),
+        'QRS3456' => array(
+            'Auto' => array(
+                'marca' => 'BMW',
+                'modelo' => 2021,
+                'tipo' => 'sedan'
+            ),
+            'Propietario' => array(
+                'nombre' => 'Ignacio Ramírez',
+                'ciudad' => 'Guadalajara',
+                'direccion' => 'Calle Hidalgo 67'
+            )
+        ),
+    );
+
+    echo '<br>';
+    //print_r($parque_vehicular);
+
+    // Comienza la estructura XHTML
+    echo '<?xml version="1.0" encoding="UTF-8" ?>';
+    echo '<!DOCTYPE html>';
+    echo '<html xmlns="http://www.w3.org/1999/xhtml" lang="es">';
+    echo '<head>';
+    echo '<title>Consulta de Parque Vehicular</title>';
+    echo '</head>';
+    echo '<body>';
+
+    // Consulta por matrícula
+    if (isset($_POST['matricula'])) {
+        $matricula = strtoupper(trim($_POST['matricula'])); // Convertir a mayúsculas
+        if (array_key_exists($matricula, $parque_vehicular)) {
+            echo "<h3>Información del vehículo con matrícula $matricula:</h3>";
+            echo "<p><strong>Marca:</strong> " . $parque_vehicular[$matricula]['Auto']['marca'] . "</p>";
+            echo "<p><strong>Modelo:</strong> " . $parque_vehicular[$matricula]['Auto']['modelo'] . "</p>";
+            echo "<p><strong>Tipo:</strong> " . $parque_vehicular[$matricula]['Auto']['tipo'] . "</p>";
+            echo "<p><strong>Propietario:</strong> " . $parque_vehicular[$matricula]['Propietario']['nombre'] . "</p>";
+            echo "<p><strong>Ciudad:</strong> " . $parque_vehicular[$matricula]['Propietario']['ciudad'] . "</p>";
+            echo "<p><strong>Dirección:</strong> " . $parque_vehicular[$matricula]['Propietario']['direccion'] . "</p>";
+        } else {
+            echo "<h3>No se encontró información para la matrícula $matricula.</h3>";
+        }
     }
+    // Consulta de todos los autos
+    if (isset($_POST['todos'])) {
+    echo "<h3>Todos los vehículos registrados:</h3>";
+    foreach ($parque_vehicular as $matricula => $info) {
+        echo "<h4>Matrícula: $matricula</h4>";
+        echo "<p><strong>Marca:</strong> " . $info['Auto']['marca'] . "</p>";
+        echo "<p><strong>Modelo:</strong> " . $info['Auto']['modelo'] . "</p>";
+        echo "<p><strong>Tipo:</strong> " . $info['Auto']['tipo'] . "</p>";
+        echo "<p><strong>Propietario:</strong> " . $info['Propietario']['nombre'] . "</p>";
+        echo "<p><strong>Ciudad:</strong> " . $info['Propietario']['ciudad'] . "</p>";
+        echo "<p><strong>Dirección:</strong> " . $info['Propietario']['direccion'] . "</p>";
+        echo "<hr />";
+    }
+}
+
+echo '</body>';
+echo '</html>';
+};
     
 ?>
 </body>

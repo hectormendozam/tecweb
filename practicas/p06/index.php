@@ -46,7 +46,7 @@
         numerosASCII();
     ?>
 
-    <h2>Ejercicio 6 - Formulario de Edad y Sexo</h2>
+    <h2>Ejercicio 5 - Formulario de Edad y Sexo</h2>
     <form action="http://localhost/tecweb/practicas/p06/index.php" method="POST">
         <label for="edad">Edad:</label>
         <input type="number" id="edad" name="edad" required><br><br>
@@ -63,20 +63,21 @@
         formularioEdadSexo();
     ?>
 
-    <h2>Ejemplo de POST</h2>
-    <form action="http://localhost/tecweb/practicas/p04/index.php" method="post">
-        Name: <input type="text" name="name"><br>
-        E-mail: <input type="text" name="email"><br>
-        <input type="submit">
+    <h2>Ejercicio 6 - Registro de autos</h2>
+    <form action="http://localhost/tecweb/practicas/p06/index.php" method="POST">
+        <label for="matricula">Ingrese la matrícula del vehículo:</label>
+        <input type="text" id="matricula" name="matricula" placeholder="Ej: ABC1234">
+        <input type="submit" value="Consultar">
     </form>
-    <br>
+    
+    <!-- Formulario para consultar todos los vehículos -->
+    <form action="http://localhost/tecweb/practicas/p06/index.php" method="POST">
+        <input type="hidden" name="todos" value="true">
+        <input type="submit" value="Consultar todos los autos registrados">
+    </form>
     <?php
-        if(isset($_POST["name"]) && isset($_POST["email"]))
-        {
-            echo $_POST["name"];
-            echo '<br>';
-            echo $_POST["email"];
-        }
+    registroAutos();
+    
     ?>
 </body>
 </html>
