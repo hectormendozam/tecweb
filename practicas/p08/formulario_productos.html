@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Productos</title>
+</head>
+<body>
+    <h2>Registro de Productos a la Base de datos</h2>
+    <fieldset>
+        <form id="productoForm" action="http://localhost/tecweb/practicas/p08/set_producto_v2.php" method="post" onsubmit="validarFormulario(event)">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" required><br><br>
+
+            <label for="marca">Marca</label>
+            <input type="text" name="marca" id="marca" required><br><br>
+
+            <label for="modelo">Modelo</label>
+            <input type="text" name="modelo" id="modelo" required><br><br>
+
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" step="0.01" required><br><br>
+
+            <label for="detalles">Detalles</label><br>
+            <textarea name="detalles" id="detalles" required></textarea><br><br>
+
+            <label for="unidades">Unidades</label>
+            <input type="number" name="unidades" id="unidades" required><br><br>
+
+            <label for="imagenes">Imagen</label>
+            <input type="text" name="imagen" id="imagen" required><br><br>
+
+            <input type="submit" name="submit" value="Enviar">
+        </form>
+    </fieldset>
+</body>
+</html>

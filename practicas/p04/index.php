@@ -34,9 +34,11 @@
 
     <h2>Ejercicio 2</h2>
     <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
+    <ul>
     <li>$a = “ManejadorSQL”;</li>
     <li>$b = 'MySQL’;</li>
-    <li>$c = &$a;</li>
+    <li>$c = &amp;$a;</li>
+    </ul>
     <?php
         //AQUI VA MI CÓDIGO PHP
         $a = "ManejadorSQL";
@@ -70,13 +72,15 @@
 
     <h2>Ejercicio 3</h2>
     <p>Muestra el contenido de cada variable inmediatamente después de cada asignación, verificar la evolución del tipo de estas variables: </p>
+    <ul>
     <li>$a = “PHP5”;</li>
-    <li>$z[] = &$a;</li>
+    <li>$z[] = &amp;$a;</li>
     <li>$b = “5a version de PHP”;</li>
     <li>$c = $b*10;</li>
     <li>$a .= $b;</li>
     <li>$b *= $c;</li>
     <li>$z[0] = “MySQL”;</li>
+    </ul>
 
     <?php
         //AQUI VA MI CÓDIGO PHP
@@ -156,10 +160,12 @@
 
     <h2>Ejercicio 5</h2>
     <p>Dar el valor de las variables $a, $b, $c al final del siguiente script:</p>
+    <ul>
     <li>$a = “7 personas”;</li>
     <li>$b = (integer) $a;</li>
     <li>$a = “9E3”;</li>
     <li>$c = (double) $a;</li>
+    </ul>
 
     <?php
         //AQUI VA MI CÓDIGO PHP
@@ -179,12 +185,14 @@
 
     <h2>Ejercicio 6</h2>
     <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f y muéstralas usando la función var_dump().</p>
+    <ul>
     <li>$a = “0”;</li>
     <li>$b = “TRUE”;</li>
     <li>$c = FALSE;</li>
     <li>$d = ($a OR $b);</li>
     <li>$e = ($a AND $c);</li>
     <li>$f = ($a XOR $b);</li>
+    </ul>
 
     <?php
         //AQUI VA MI CÓDIGO PHP
@@ -223,9 +231,11 @@
 
     <h2>Ejercicio 7</h2>
     <p>Usando la variable predefinida $_SERVER, determina lo siguiente:</p>
+    <ul>
     <li>La versión de Apache y PHP</li>
     <li>El nombre del sistema operativo (servidor)</li>
     <li>El idioma del navegador (cliente).</li>
+    </ul>
 
     <?php
         //AQUI VA MI CÓDIGO PHP
@@ -236,5 +246,10 @@
         echo '<br>';
         echo "Idioma del navegador: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'];
     ?>
+
+    <p>
+        <a href="https://validator.w3.org/markup/check?uri=referer"><img
+        src="https://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+    </p>
 </body>
 </html>
