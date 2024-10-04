@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<p>El producto con nombre '$nombre', marca '$marca' y modelo '$modelo' ya existe en la base de datos.</p>";
     } else {
         // Insertar el nuevo producto
-        $stmt = $link->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen) 
-                                VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $link->prepare("INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?, 0)");
         if ($stmt === false) {
             die('Error al preparar la consulta: ' . $link->error);
         }
