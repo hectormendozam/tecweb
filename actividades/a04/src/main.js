@@ -195,3 +195,69 @@ function de1a10 (){
     document.write(f+" ");
     }
 }
+
+function mensajeCuidado (){
+    document.write("Cuidado<br>");
+    document.write("Ingresa tu documento correctamente<br>");
+    document.write("Cuidado<br>");
+    document.write("Ingresa tu documento correctamente<br>");
+    document.write("Cuidado<br>");
+    document.write("Ingresa tu documento correctamente<br>");
+}
+
+function mostrarMensaje() {
+    document.write("Cuidado<br>");
+    document.write("Ingresa tu documento correctamente<br>");
+    }
+
+    function mostrarRango(x1,x2) {
+        var valor1,valor2;
+        x1 = prompt('Ingresa el valor inferior:', '');
+        valor1 = parseInt(valor1);
+        valor2 = prompt('Ingresa el valor superior:', '');
+        x2 = parseInt(valor2);
+        
+        var inicio;
+        for(inicio=x1; inicio<=x2; inicio++) {
+        document.write(inicio+' ');
+        
+        }
+        }
+        
+
+        function convertirCastellanov1(x) {
+            var x = prompt("Ingresa un valor entre 1 y 5", "");
+            x = parseInt(x);
+
+            if(x==1)
+            return document.write("uno");
+            else
+            if(x==2)
+            return document.write("dos");
+            else
+            if(x==3)
+            return document.write("tres");
+            else
+            if(x==4)
+            return document.write("cuatro");
+            else
+            if(x==5)
+            return document.write("cinco");
+            else
+            return document.write("valor incorrecto");
+            }
+            
+
+            function convertirCastellanov2(x) {
+                var x = prompt("Ingresa un valor entre 1 y 5", "");
+                x = parseInt(x);
+
+                switch (x) {
+                case 1: return document.write("uno");
+                case 2: return document.write("dos");
+                case 3: return document.write("tres");
+                case 4: return document.write("cuatro");
+                case 5: return document.write("cinco");
+                default: return document.write("valor incorrecto");
+                }
+                }
