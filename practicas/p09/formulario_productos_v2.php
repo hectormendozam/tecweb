@@ -14,12 +14,12 @@
 <body>
     <h1>Datos para Registro de Relojes</h1>
 
-    <form id="formularioRelojes" onsubmit="" method="post">
+    <form id="miFormulario" method="POST" action="update_producto.php">
         <fieldset>
             <legend>Actualiza los datos del reloj</legend>
             <ul>
             <li><label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" value="<?= isset($_POST['nombre']) ? htmlspecialchars($_POST['nombre']) : (isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : '') ?>" required>
+            <input type="text" id="nombre" name="nombre" value="<?= isset($_POST['nombre']) ? htmlspecialchars($_POST['nombre']) : (isset($_GET['nombre']) ? htmlspecialchars($_GET['nombre']) : '') ?>" required>
             </li><br>
             <li><label for="marcas">Selecciona una marca:</label>
             <select id="marcas" name="marca" required>
@@ -33,24 +33,35 @@
             </select>
             </li><br>
             <li><label for="modelo">Modelo:</label>
-            <input type="text" name="modelo" value="<?= isset($_POST['modelo']) ? htmlspecialchars($_POST['modelo']) : (isset($_GET['modelo']) ? htmlspecialchars($_GET['modelo']) : '') ?>" required>
+            <input type="text" id="modelo" name="modelo" value="<?= isset($_POST['modelo']) ? htmlspecialchars($_POST['modelo']) : (isset($_GET['modelo']) ? htmlspecialchars($_GET['modelo']) : '') ?>" required>
             </li><br>
             <li><label for="precio">Precio:</label>
-            <input type="number" name="precio" step="0.01" value="<?= isset($_POST['precio']) ? htmlspecialchars($_POST['precio']) : (isset($_GET['precio']) ? htmlspecialchars($_GET['precio']) : '') ?>" required>
+            <input type="number" id="precio" name="precio" step="0.01" value="<?= isset($_POST['precio']) ? htmlspecialchars($_POST['precio']) : (isset($_GET['precio']) ? htmlspecialchars($_GET['precio']) : '') ?>" required>
             </li><br>
             <li><label for="detalles">Detalles:</label>
-            <textarea name="detalles"><?= isset($_POST['detalles']) ? htmlspecialchars($_POST['detalles']) : (isset($_GET['detalles']) ? htmlspecialchars($_GET['detalles']) : '') ?></textarea>
+            <textarea name="detalles" value=""><?= isset($_POST['detalles']) ? htmlspecialchars($_POST['detalles']) : (isset($_GET['detalles']) ? htmlspecialchars($_GET['detalles']) : '') ?></textarea>
             </li><br>
             <li><label for="unidades">Unidades:</label>
-            <input type="number" name="unidades" value="<?= isset($_POST['unidades']) ? htmlspecialchars($_POST['unidades']) : (isset($_GET['unidades']) ? htmlspecialchars($_GET['unidades']) : '') ?>" required>
+            <input type="number" id="unidades" name="unidades" value="<?= isset($_POST['unidades']) ? htmlspecialchars($_POST['unidades']) : (isset($_GET['unidades']) ? htmlspecialchars($_GET['unidades']) : '') ?>" required>
             </li><br>
             <li><label for="imagen">Imagen:</label>
-            <input type="text" name="imagen" value="<?= isset($_POST['imagen']) ? htmlspecialchars($_POST['imagen']) : (isset($_GET['imagen']) ? htmlspecialchars($_GET['imagen']) : '') ?>">
+            <input type="text" id="imagen" name="imagen" value="<?= isset($_POST['imagen']) ? htmlspecialchars($_POST['imagen']) : (isset($_GET['imagen']) ? htmlspecialchars($_GET['imagen']) : '') ?>">
             </li><br>
             </ul>
         </fieldset>
+
+        <script>
+        if (isset($_POST['id'])) {
+            $id = (int) $_POST['id'];
+        } else {
+            echo "Error: No se proporcionó el ID del producto.";
+            exit;
+        }
+        </script>
+        <input type="hidden" name="id" value="<?= isset($_POST['id']) ? htmlspecialchars($_POST['id']) : '' ?>" />
+
         <p>
-            <input type="submit" value="ENVIAR">
+            <input type="submit" value="Actualizar el producto">
         </p>
     </form>
 </body>

@@ -75,13 +75,14 @@
 				var units = data[4].innerHTML;
                 var details = data[5].innerHTML;
 				var image = data[6].firstChild.getAttribute('src');
+				var id = rowId;
 
                 alert("Nombre: " + name + "\nMarca: " + brand+ "\nModelo: " + model+ "\nPrecio: " + price+ "\nUnidades: " + units+ "\nDetalles: " + details+ "\nImagen: " + image);
 
-                send2form(name, brand, model, price, units, details, image);
+                send2form(name, brand, model, price, units, details, image, id);
             }
 
-		function send2form(name, brand, model, price, units, details, image) {
+		function send2form(name, brand, model, price, units, details, image, id) {
                 var form = document.createElement("form");
 
                 var nombreIn = document.createElement("input");
@@ -125,6 +126,12 @@
 				imagenIn.name = 'imagen';
 				imagenIn.value = image;
 				form.appendChild(imagenIn);
+
+				var idIn = document.createElement("input");
+				idIn.type = 'number';
+				idIn.name = 'id';
+				idIn.value = id;
+				form.appendChild(idIn);
 
                 console.log(form);
 
