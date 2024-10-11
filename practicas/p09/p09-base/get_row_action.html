@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet"
-              href= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-              integrity= "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-              crossorigin="anonymous" />
+            href= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+            integrity= "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous" />
         <script>
             function show() {
                 // se obtiene el id de la fila donde está el botón presinado
@@ -47,8 +47,8 @@
                     <td class="row-data">Sara</td>
                     <td class="row-data">23</td>
                     <td><input type="button" 
-                               value="submit" 
-                               onclick="show()" /></td>
+                            value="submit" 
+                            onclick="show()" /></td>
                 </tr>
 
                 <tr id="2">
@@ -56,8 +56,8 @@
                     <td class="row-data">John</td>
                     <td class="row-data">30</td>
                     <td><input type="button" 
-                               value="submit" 
-                               onclick="show()" /></td>
+                            value="submit" 
+                            onclick="show()" /></td>
                 </tr>
 
                 <tr id="3">
@@ -65,14 +65,14 @@
                     <td class="row-data">Naman</td>
                     <td class="row-data">20</td>
                     <td><input type="button" 
-                               value="submit" 
-                               onclick="show()" /></td>
+                            value="submit" 
+                            onclick="show()" /></td>
                 </tr>
             </tbody>
         </table>
         <script>
             function send2form(name, age) {     //form) { 
-                var urlForm = "http://localhost/buap/tecweb/practicas/p07/formulario.php";
+                var urlForm = "http://localhost/tecweb/practicas/p09/p09-base/formulario.php";
                 var propName = "nombre="+name;
                 var propAge = "edad="+age;
                 window.open(urlForm+"?"+propName+"&"+propAge);
