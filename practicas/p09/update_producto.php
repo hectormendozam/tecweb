@@ -20,8 +20,6 @@ $stmt = mysqli_prepare($link, "UPDATE productos SET nombre=?, marca=?, modelo=?,
                                 WHERE id=?");
 mysqli_stmt_bind_param($stmt, "sssidssi", $nombre, $marca, $modelo, $precio, $unidades, $detalles, $imagen, $id);
 
-echo "Consulta SQL: UPDATE productos SET nombre=$nombre, marca=$marca, modelo=$modelo, precio=$precio, unidades=$unidades, detalles=$detalles, imagen=$imagen WHERE id=$id";
-
 // Ejecutar la actualización
 if(mysqli_stmt_execute($stmt)){
     echo "<h3>Producto actualizado correctamente.</h3>";
