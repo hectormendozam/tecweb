@@ -6,7 +6,7 @@ var baseJSON = {
     "marca": "NA",
     "detalles": "NA",
     "imagen": "img/default.png"
-  };
+};
 
 // FUNCIÓN CALLBACK DE BOTÓN "Buscar"
 function buscarID(e) {
@@ -27,7 +27,7 @@ function buscarID(e) {
     client.onreadystatechange = function () {
         // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
         if (client.readyState == 4 && client.status == 200) {
-            console.log('[CLIENTE]\n'+client.responseText);
+            conole.log('[CLIENTE]\n'+client.responseText);
             
             // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
             let productos = JSON.parse(client.responseText);    // similar a eval('('+client.responseText+')');
@@ -84,6 +84,60 @@ function agregarProducto(e) {
         }
     };
     client.send(productoJsonString);
+}
+
+function buscarProducto(e) {
+    e.preventDefault();
+
+    // SE OBTIENE EL TÉRMINO A BUSCAR (puede ser parte del nombre, marca o detalles)
+    var search = document.getElementById('search').value;
+
+    // SE CREA EL OBJETO DE CONEXIÓN ASÍNCRONA AL SERVIDOR
+    var client = getXMLHttpRequest();
+    client.open('POST', './backend/read.php', true);
+    client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    client.onreadystatechange = function () {
+        // SE VERIFICA SI LA RESPUESTA ESTÁ LISTA Y FUE SATISFACTORIA
+        if (client.readyState == 4 && client.status == 200) {
+            console.log('[CLIENTE]\n'+client.responseText);
+            
+            // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
+            let productos = JSON.parse(client.responseText);
+
+            // LIMPIA LA TABLA ANTES DE AGREGAR NUEVOS RESULTADOS
+            document.getElementById("productos").innerHTML = "";
+
+            // SE VERIFICA SI EL OBJETO JSON TIENE PRODUCTOS
+            if (productos.length > 0) {
+                // RECORRE LOS PRODUCTOS Y CREA UNA FILA HTML PARA CADA UNO
+                productos.forEach(producto => {
+                    let descripcion = '';
+                    descripcion += '<li>precio: '+producto.precio+'</li>';
+                    descripcion += '<li>unidades: '+producto.unidades+'</li>';
+                    descripcion += '<li>modelo: '+producto.modelo+'</li>';
+                    descripcion += '<li>marca: '+producto.marca+'</li>';
+                    descripcion += '<li>detalles: '+producto.detalles+'</li>';
+
+                    // SE CREA UNA PLANTILLA PARA CREAR LA(S) FILA(S) A INSERTAR EN EL DOCUMENTO HTML
+                    let template = '';
+                    template += `
+                        <tr>
+                            <td>${producto.id}</td>
+                            <td>${producto.nombre}</td>
+                            <td><ul>${descripcion}</ul></td>
+                        </tr>
+                    `;
+
+                    // SE INSERTA LA PLANTILLA EN EL ELEMENTO CON ID "productos"
+                    document.getElementById("productos").innerHTML += template;
+                });
+            } else {
+                // SI NO HAY RESULTADOS, SE MUESTRA UN MENSAJE
+                document.getElementById("productos").innerHTML = "<tr><td colspan='3'>No se encontraron productos</td></tr>";
+            }
+        }
+    };
+    client.send("search=" + encodeURIComponent(search));
 }
 
 // SE CREA EL OBJETO DE CONEXIÓN COMPATIBLE CON EL NAVEGADOR
