@@ -60,7 +60,6 @@ function buscarID(e) {
     client.send("id="+id);
 }
 
-// FUNCIÓN CALLBACK DE BOTÓN "Agregar Producto"
 function agregarProducto(e) {
     e.preventDefault();
 
@@ -72,6 +71,10 @@ function agregarProducto(e) {
     finalJSON['nombre'] = document.getElementById('name').value;
     // SE OBTIENE EL STRING DEL JSON FINAL
     productoJsonString = JSON.stringify(finalJSON,null,2);
+
+    if (!validarJSON(finalJSON)) {
+        return; // Detener el proceso si la validación falla
+    }
 
     // SE CREA EL OBJETO DE CONEXIÓN ASÍNCRONA AL SERVIDOR
     var client = getXMLHttpRequest();
@@ -173,4 +176,58 @@ function init() {
      */
     var JsonString = JSON.stringify(baseJSON,null,2);
     document.getElementById("description").value = JsonString;
+}
+
+function validarJSON(finalJSON){
+    if (!finalJSON.nombre || finalJSON.nombre.length == 0) {
+    alert("El nombre del producto es obligatorio");
+    return false;
+    }
+    if(!finalJSON.nombre.length > 100){
+    alert("El nombre del producto no puede ser mayor a 100 caracteres");
+    return false;
+    }
+
+    const marcasValidas = ["Samsung", "Apple", "Huawei", "Xiaomi", "Garmin", "Fitbit", "Polar"];
+    if (!finalJSON.marca || finalJSON.marca.length == 0) {
+    alert("La marca del producto es obligatoria");
+    return false;
+    }
+    if (!marcasValidas.includes(finalJSON.marca)) {
+        alert("La marca del producto no es válida");
+        return false;
+    }
+    if (!finalJSON.precio || finalJSON.precio.length == 0) {
+        alert("Ingrese el precio");
+        return false;
+    }
+    if (isNaN(finalJSON.precio)) {
+        alert("El precio debe ser un número");
+        return false;
+    }
+    if (finalJSON.precio < 99.99) {
+        alert("El precio no puede ser menor a $99.99");
+        return false;
+    }
+    if(finalJSON.unidades == null || finalJSON.unidades < 0){
+        alert("La cantidad mínima de unidades es 0");
+        return false;
+    }
+    if (finalJSON.imagen || finalJSON.imagen.length == 0) {
+        finalJSON.imagen = "img/default.png";
+    }
+    if (finalJSON.modelo || finalJSON.modelo.length == 0) {
+        alert("El modelo del producto es obligatorio");
+        return false;
+    }
+    if (!/^[a-zA-Z0-9]{1,25}$/.test(finalJSON.modelo) || finalJSON.modelo.length > 25) {
+        alert("El modelo debe ser alfanumérico y menor a 25 caracteres");
+        return false;
+    }
+    if (finalJSON.detalles || finalJSON.detalles.length > 250) {
+        alert("Los detalles no pueden ser mayores a 250 caracteres");
+        return false;
+    }
+
+    return true;
 }
