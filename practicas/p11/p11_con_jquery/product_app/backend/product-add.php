@@ -7,41 +7,29 @@
         'status'  => 'error',
         'message' => 'Ya existe un producto con ese nombre'
     );
-    if (!empty($producto)) {
+    if(!empty($producto)) {
+        // SE TRANSFORMA EL STRING DEL JASON A OBJETO
         $jsonOBJ = json_decode($producto);
-    
-        // Validar que el nombre no esté vacío
-        if (empty($jsonOBJ->nombre)) {
-            $data['message'] = 'El nombre del producto es obligatorio.';
-            exit;
-        }
-    
-        // Verificar si el producto ya existe
+        // SE ASUME QUE LOS DATOS YA FUERON VALIDADOS ANTES DE ENVIARSE
         $sql = "SELECT * FROM productos WHERE nombre = '{$jsonOBJ->nombre}' AND eliminado = 0";
-        $result = $conexion->query($sql);
-    
-        if ($result === false) {
-            $data['message'] = "ERROR: No se pudo ejecutar la consulta. " . mysqli_error($conexion);
-        } elseif ($result->num_rows > 0) {
-            // Producto ya existe
-            $data['message'] = 'Ya existe un producto con ese nombre';
-        } else {
-            // Insertar el nuevo producto
+	    $result = $conexion->query($sql);
+
+        if ($result->num_rows == 0) {
             $conexion->set_charset("utf8");
-            $sql = "INSERT INTO productos (nombre, marca, modelo, precio, detalles, unidades, imagen, eliminado) VALUES ('{$jsonOBJ->nombre}', '{$jsonOBJ->marca}', '{$jsonOBJ->modelo}', {$jsonOBJ->precio}, '{$jsonOBJ->detalles}', {$jsonOBJ->unidades}, '{$jsonOBJ->imagen}', 0)";
-            
-            if ($conexion->query($sql)) {
-                $data['status'] = "success";
-                $data['message'] = "Producto agregado correctamente.";
+            $sql = "INSERT INTO productos VALUES (null, '{$jsonOBJ->nombre}', '{$jsonOBJ->marca}', '{$jsonOBJ->modelo}', {$jsonOBJ->precio}, '{$jsonOBJ->detalles}', {$jsonOBJ->unidades}, '{$jsonOBJ->imagen}', 0)";
+            if($conexion->query($sql)){
+                $data['status'] =  "success";
+                $data['message'] =  "Producto agregado";
             } else {
-                $data['message'] = "ERROR: No se ejecutó $sql. " . mysqli_error($conexion);
+                $data['message'] = "ERROR: No se ejecuto $sql. " . mysqli_error($conexion);
             }
         }
-    
+
         $result->free();
+        // Cierra la conexion
         $conexion->close();
     }
-    
-    echo json_encode($data, JSON_PRETTY_PRINT);
 
+    // SE HACE LA CONVERSIÓN DE ARRAY A JSON
+    echo json_encode($data, JSON_PRETTY_PRINT);
 ?>
