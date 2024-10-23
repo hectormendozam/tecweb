@@ -128,7 +128,7 @@ $(document).ready(function() {
         finalJSON['nombre'] = document.getElementById('name').value;
         productoJsonString = JSON.stringify(finalJSON, null, 2);
 
-        // Validar nombre
+        // Validar nombre de producto
         if (!finalJSON.nombre || finalJSON.nombre.length == 0) {
             alert('Ingresa un nombre');
             return false;
@@ -138,7 +138,7 @@ $(document).ready(function() {
             return false;
         }
 
-        // Validar marca
+        // Validar marca de producto
         const marcasValidas = ['Garmin', 'Samsung', 'Apple', 'Huawei', 'FitBit', 'Xiaomi', 'Polar'];
         if (!finalJSON.marca || finalJSON.marca.length == 0) {
             alert('Selecciona una marca');
@@ -149,7 +149,7 @@ $(document).ready(function() {
             return false;
         }
 
-        // Validar modelo
+        // Validar modelo de producto
         if (!finalJSON.modelo || finalJSON.modelo.length == 0) {
             alert('Ingresa un modelo');
             return false;
@@ -159,7 +159,7 @@ $(document).ready(function() {
             return false;
         }
 
-        // Validar precio
+        // Validar precio de producto
         if (!finalJSON.precio || finalJSON.precio.length == 0) {
             alert('Ingresa el precio');
             return false;
@@ -169,19 +169,19 @@ $(document).ready(function() {
             return false;
         }
 
-        // Validar detalles
+        // Validar detalles de producto
         if (finalJSON.detalles && finalJSON.detalles.length > 250) {
             alert('Los detalles deben tener máximo 250 caracteres');
             return false;
         }
 
-        // Validar unidades
+        // Validar unidades de producto
         if (finalJSON.unidades == null || finalJSON.unidades < 0) {
             alert('Cantidad mínima de unidades es 0');
             return false;
         }
 
-        // Validar imagen
+        // Validar imagen de producto
         if (!finalJSON.imagen || finalJSON.imagen.length == 0) {
             finalJSON.imagen = 'img/pre.png';  // Asignar una imagen por defecto
         }
@@ -216,7 +216,7 @@ $(document).ready(function() {
     });
 
     $(document).on('click', '.product-delete', function() {
-        if( confirm("De verdad deseas eliminar el Producto") ) {
+        if( confirm("¿De verdad deseas eliminar este producto?") ) {
             var id = event.target.parentElement.parentElement.getAttribute("productId");
             $.ajax({
                 url: './backend/product-delete.php?id='+id,
