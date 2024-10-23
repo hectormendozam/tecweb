@@ -106,3 +106,28 @@ function buscarProducto() {
     });
 }
 
+function agregarProducto(e) {
+    e.preventDefault();
+    var productoJsonString = $('#description').val();
+    var finalJSON = JSON.parse(productoJsonString);
+    finalJSON['nombre'] = $('#name').val();
+
+    $.ajax({
+        url : './backend/product-add.php',
+        method: 'POST',
+        data: JSON.stringify(finalJSON),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: function(respuesta) {
+            let template_bar = `
+                <li style="list-style: none;">status: ${respuesta.status}</li>
+                <li style="list-style: none;">message: ${respuesta.message}</li>
+            `;
+
+            $("#product-result").addClass("d-block");
+            $("#container").html(template_bar);
+            listarProductos(); // Cargar productos después de agregar
+        }
+    });
+}
+
