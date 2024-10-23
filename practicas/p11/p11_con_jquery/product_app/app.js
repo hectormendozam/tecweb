@@ -131,3 +131,29 @@ function agregarProducto(e) {
     });
 }
 
+function eliminarProducto(id) {
+    if (confirm("¿De verdad deseas eliminar este producto?")) {
+        $.ajax({
+            url: './backend/product-delete.php',
+            method: 'GET',
+            data: { id: id },
+            dataType: 'json',
+            success: function(respuesta) {
+                let template_bar = `
+                    <li style="list-style: none;">status: ${respuesta.status}</li>
+                    <li style="list-style: none;">message: ${respuesta.message}</li>
+                `;
+
+                $("#product-result").addClass("d-block");
+                $("#container").html(template_bar);
+                listarProductos(); // Cargar productos después de eliminar
+            }
+        });
+    }
+}
+
+$(document).ready(function() {
+    init();
+    $('#search').on('keyup', buscarProducto);
+    $('#add-product-form').on('submit', agregarProducto);
+});
