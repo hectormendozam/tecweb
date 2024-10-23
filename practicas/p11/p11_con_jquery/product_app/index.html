@@ -32,13 +32,13 @@
               <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
               <form id="product-form">
                 <div class="form-group">
-                  <input class="form-control" type="text" id="name" placeholder="Nombre de producto">
+                  <input class="form-control" type="text" id="name" placeholder="Nombre de producto" required>
                 </div>
                 <div class="form-group">
                   <textarea class="form-control" id="description" cols="30" rows="10" placeholder="JSON de producto"></textarea>
                 </div>
                 <input type="hidden" id="productId">
-                <button class="btn btn-primary btn-block text-center" type="submit">
+                <button class="btn btn-primary btn-block text-center" type="submit" onclick="agregarProducto(event)">
                   Agregar Producto
                 </button>
               </form>

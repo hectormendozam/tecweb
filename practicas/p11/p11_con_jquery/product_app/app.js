@@ -119,14 +119,15 @@ function agregarProducto(e) {
         contentType: 'application/json',
         dataType: 'json',
         success: function(respuesta) {
-            let template_bar = `
-                <li style="list-style: none;">status: ${respuesta.status}</li>
-                <li style="list-style: none;">message: ${respuesta.message}</li>
-            `;
+            // Mostrar el mensaje en una ventana emergente
+            alert(`Status: ${respuesta.status}\nMessage: ${respuesta.message}`);
 
-            $("#product-result").addClass("d-block");
-            $("#container").html(template_bar);
-            listarProductos(); // Cargar productos después de agregar
+            // Cargar productos después de agregar
+            listarProductos();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            // Mostrar el mensaje de error en una ventana emergente
+            alert(`Status: error\nMessage: ${textStatus}`);
         }
     });
 }
