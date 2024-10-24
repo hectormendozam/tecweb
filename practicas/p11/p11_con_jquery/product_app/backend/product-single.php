@@ -14,7 +14,7 @@
             if(!is_null($rows)) {
                 foreach($rows as $num => $row) {
                     foreach($row as $key => $value) {
-                        $data[$num][$key] = utf8_encode($value);  // CODIFICA CADA CAMPO EN UTF-8
+                        $data[$num][$key] = utf8_encode($value);
                     }
                 }
             }
