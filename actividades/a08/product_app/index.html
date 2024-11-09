@@ -33,7 +33,6 @@
               <form id="product-form">
                 <div class="form-group">
                   <fieldset>
-                    <form id="productoForm" method="post"></form>
                       <input class="form-control" type="text" id="name" placeholder="Nombre de producto" onblur="validarNombre(this.value)"> <br>
                         <label for="marcas">Selecciona una marca:</label>
                         <select id="marcas" name="marca" onblur="validarMarca(this.value, ['garmin', 'apple', 'fitbit', 'polar', 'samsung', 'huawei'])" required>
@@ -55,7 +54,6 @@
                         <input class="form-control" type="number" name="unidades" id="unidades" placeholder="Unidades (en número)" onblur="validarUnidades(this.value)" required><br>
             
                         <input class="form-control" type="text" name="imagen" placeholder="Imagen del producto (Ruta del archivo)" id="imagen" onblur="validarImagen(this.value)"><br>
-                        </form>
                 </fieldset>                
                 </div>
                 <input type="hidden" id="productId">

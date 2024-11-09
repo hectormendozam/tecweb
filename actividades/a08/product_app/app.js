@@ -8,16 +8,6 @@ var baseJSON = {
     "imagen": "img/default.png"
 };
 
-function mostrarEstado(mensaje) {
-    const container = document.getElementById('container');
-    if (mensaje !== "Nombre válido." && mensaje !== "Modelo válido.") {
-        container.innerHTML = `<li>${mensaje}</li>`;
-        container.style.display = 'block';
-    } else {
-        container.innerHTML = '';
-        container.style.display = 'none';
-    }
-}
 
 function validarNombre(nombre) {
     /*if (!nombre || nombre.trim() === "") {
