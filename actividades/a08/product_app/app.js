@@ -121,11 +121,26 @@ $(document).ready(function(){
     $('#product-form').submit(e => {
         e.preventDefault();
 
-        // SE CONVIERTE EL JSON DE STRING A OBJETO
-        let postData = JSON.parse( $('#description').val() );
-        // SE AGREGA AL JSON EL NOMBRE DEL PRODUCTO
-        postData['nombre'] = $('#name').val();
-        postData['id'] = $('#productId').val();
+        var datosProducto = {
+            id: $('#productId').val(),
+            nombre: $('#nombre').val(),
+            marca: $('#marcas').val(),
+            modelo: $('#modelo').val(),
+            precio: $('#precio').val(),
+            detalles: $('#detalles').val(),
+            unidades: $('#unidades').val(),
+            imagen: $('#imagen').val()
+        };
+
+        var productoJsonString = JSON.stringify(datosProducto, null, 3);
+
+        datosProducto['nombre'] = document.getElementById('name').value;
+        datosProducto['id'] = document.getElementById('productId').value;
+
+        productoJsonString = JSON.stringify(datosProducto, null, 3);
+
+        var finalJSON = JSON.parse(productoJsonString);
+        productoJsonString = JSON.stringify(finalJSON, null, 3);
 
         let template_bar = '';
         let errores = [];
@@ -336,7 +351,7 @@ template_bar = '<ul>';
 template_bar+= '<li style="list-style: none;">status: Error</li>';
 
 function validarNombre(){
-    var nombre = document.getElementById("form-name");
+    var nombre = document.getElementById("name");
     if(nombre.value == ''){
         template_bar += `<li style="list-style: none;">El campo nombre es obligatorio</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
@@ -351,7 +366,7 @@ function validarNombre(){
 }
 
 function validarMarca(){
-    var marca = document.getElementById("form-brand");
+    var marca = document.getElementById("marcas");
     if (marca.value == ""){
         template_bar += `<li style="list-style: none;">El campo marca es obligatorio</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
@@ -360,7 +375,7 @@ function validarMarca(){
 }
 
 function validarModelo(){
-    var modelo = document.getElementById("form-model");
+    var modelo = document.getElementById("modelo");
     if (modelo.value == ''){
         template_bar += `<li style="list-style: none;">Ingresa un modelo</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
@@ -369,7 +384,7 @@ function validarModelo(){
 }
 
 function validarPrecio(){
-    var precio = document.getElementById("form-price");
+    var precio = document.getElementById("precio");
     if (precio.value == ''){
         template_bar += `<li style="list-style: none;">Ingresa el precio</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
@@ -383,7 +398,7 @@ function validarPrecio(){
 }
 
 function validarDetalles(){
-    var detalles = document.getElementById("form-details");
+    var detalles = document.getElementById("detalles");
     if(detalles.value > 250)
     {
         template_bar += `<li style="list-style: none;">Los detalles deben tener máximo 250 caracteres</li>`;
@@ -393,7 +408,7 @@ function validarDetalles(){
 }
 
 function validarUnidades(){
-    var unidades = document.getElementById("form-units");
+    var unidades = document.getElementById("unidades");
     if (unidades.value == ''){
         template_bar += `<li style="list-style: none;">El campo unidades es obligatorio</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
@@ -407,7 +422,7 @@ function validarUnidades(){
 }
 
 function validarImagen(){
-    var imagen = document.getElementById("form-img");
+    var imagen = document.getElementById("imagen");
     if (imagen.value == ''){
         template_bar += `<li style="list-style: none;">Se asignó una imagen por defecto</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
