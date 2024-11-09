@@ -33,9 +33,9 @@
               <form id="product-form">
                 <div class="form-group">
                   <fieldset>
-                      <input class="form-control" type="text" id="name" placeholder="Nombre de producto" onblur="validarNombre(this.value)"> <br>
+                      <input class="form-control" type="text" id="name" placeholder="Nombre de producto" onblur="validarNombre();"> <br>
                         <label for="marcas">Selecciona una marca:</label>
-                        <select id="marcas" name="marca" onblur="validarMarca(this.value, ['garmin', 'apple', 'fitbit', 'polar', 'samsung', 'huawei'])" required>
+                        <select id="marcas" name="marca" onblur="validarMarca();" required>
                             <option value="" selected disabled>Elige una opción</option>
                             <option value="garmin">Garmin</option>
                             <option value="apple">Apple</option>
@@ -45,15 +45,15 @@
                             <option value="huawei">Huawei</option>
                         </select><br><br>
             
-                        <input class="form-control" type="text" name="modelo" id="modelo" placeholder="Modelo del producto" onblur="validarModelo(this.value)" required><br>
+                        <input class="form-control" type="text" name="modelo" id="modelo" placeholder="Modelo del producto" onblur="validarModelo();" required><br>
             
-                        <input class="form-control" type="number" name="precio" id="precio" step="0.01" placeholder="Precio del producto" onblur="validarPrecio(this.values)" required><br>
+                        <input class="form-control" type="number" name="precio" id="precio" step="0.01" placeholder="Precio del producto" onblur="validarPrecio();" required><br>
             
-                        <textarea class="form-control" name="detalles" id="detalles" placeholder="Detalles del producto" onblur="validarDetalles(this.value)"></textarea><br>
+                        <textarea class="form-control" name="detalles" id="detalles" placeholder="Detalles del producto" onblur="validarDetalles();"></textarea><br>
             
-                        <input class="form-control" type="number" name="unidades" id="unidades" placeholder="Unidades (en número)" onblur="validarUnidades(this.value)" required><br>
+                        <input class="form-control" type="number" name="unidades" id="unidades" placeholder="Unidades (en número)" onblur="validarUnidades();" required><br>
             
-                        <input class="form-control" type="text" name="imagen" placeholder="Imagen del producto (Ruta del archivo)" id="imagen" onblur="validarImagen(this.value)"><br>
+                        <input class="form-control" type="text" name="imagen" placeholder="Imagen del producto (Ruta del archivo)" id="imagen" onblur="validarImagen();"><br>
                 </fieldset>                
                 </div>
                 <input type="hidden" id="productId">

@@ -1,124 +1,12 @@
 // JSON BASE A MOSTRAR EN FORMULARIO
-var baseJSON = {
+/*var baseJSON = {
     "precio": 0.0,
     "unidades": 1,
     "modelo": "XX-000",
     "marca": "NA",
     "detalles": "NA",
     "imagen": "img/default.png"
-};
-
-
-function validarNombre(nombre) {
-    /*if (!nombre || nombre.trim() === "") {
-        return "El nombre es requerido.";
-    }*/
-    if (nombre.length > 100) {
-        return "El nombre no debe tener más de 100 caracteres.";
-    }
-    return "Nombre válido.";
-}
-
-function validarMarca(marca, opcionesValidas) {
-
-    if (!opcionesValidas.includes(marca)) {
-        return "La marca seleccionada no es válida.";
-    }
-    return "Marca válida.";
-}
-
-function validarModelo(modelo) {
-    const alfanumericoRegex = /^[a-zA-Z0-9\s]+$/; // Permite letras, números y espacios
-    
-    if (!alfanumericoRegex.test(modelo)) {
-        return "El modelo debe ser alfanumérico.";
-    }
-    if (modelo.length > 25) {
-        return "El modelo no debe tener más de 25 caracteres.";
-    }
-    return "Modelo válido.";
-}
-
-function validarPrecio(precio) {
-    if (isNaN(precio)) {
-        return "El precio debe ser un número válido.";
-    }
-    if (parseFloat(precio) <= 99.99) {
-        return "El precio debe ser mayor a 99.99.";
-    }
-    // Verifica que el precio tenga como máximo 2 decimales
-    const dosDecimales = /^\d+(\.\d{1,2})?$/;
-    if (!dosDecimales.test(precio)) {
-        return "El precio debe tener como máximo 2 decimales.";
-    }
-    return "Precio válido.";
-}
-
-function validarDetalles(detalles) {
-    if (detalles.length > 250) {
-        return "Los detalles no deben tener más de 250 caracteres.";
-    }
-    return "Detalles válidos.";
-}
-
-function validarUnidades(unidades) {
-    if (isNaN(unidades) || parseInt(unidades) < 0) {
-        return "Las unidades deben ser un número mayor o igual a 0.";
-    }
-    return "Unidades válidas.";
-}
-
-function validarImagen(rutaImagen) {
-    const rutaPorDefecto = "C:/xampp/htdocs/tecweb/defecto.jpg";  // Aquí defines la ruta por defecto
-
-    if (!rutaImagen || rutaImagen.trim() === "") {
-        return rutaPorDefecto;  // Si la ruta de imagen no se proporciona, usa la ruta por defecto
-    }
-    return rutaImagen;  // Si se proporciona una ruta válida, usa la ruta proporcionada
-}
-
-function validarFormulario(event) {
-    event.preventDefault(); // Evitar el envío del formulario
-
-    const nombre = document.getElementById('nombre').value;
-    const marca = document.getElementById('marcas').value;
-    const modelo = document.getElementById('modelo').value;
-    const precio = document.getElementById('precio').value;
-    const detalles = document.getElementById('detalles').value;
-    const unidades = document.getElementById('unidades').value;
-    const imagen = document.getElementById('imagen').value;
-
-    const opcionesValidas = ["garmin", "apple", "fitbit", "polar", "samsung", "huawei"];
-    const errores = [];
-
-    // Validar cada campo y agregar errores si los hay
-    errores.push(validarNombre(nombre));
-    errores.push(validarMarca(marca, opcionesValidas));
-    errores.push(validarModelo(modelo));
-    errores.push(validarPrecio(precio));
-    errores.push(validarDetalles(detalles));
-    errores.push(validarUnidades(unidades));
-    const imagenValida = validarImagen(imagen);
-    if (imagenValida !== "ruta/a/imagen/por/defecto.jpg") {
-        //errores.push(imagenValida);
-    }
-
-    // Filtrar errores vacíos y mostrar resultados
-    const erroresFiltrados = errores.filter(error => error !== "Nombre válido." && 
-                                                    error !== "Marca válida." && 
-                                                    error !== "Modelo válido." && 
-                                                    error !== "Precio válido." && 
-                                                    error !== "Detalles válidos." && 
-                                                    error !== "Unidades válidas.");
-
-    if (erroresFiltrados.length > 0) {
-        alert(erroresFiltrados.join('\n')); // Muestra los errores en una alerta
-    } else {
-        alert("Formulario enviado correctamente!"); // Mensaje de éxito
-        // Aquí puedes enviar el formulario si es necesario
-        // document.getElementById('productoForm').submit();
-    }
-}
+};*/
 
 $(document).ready(function(){
     let edit = false;
