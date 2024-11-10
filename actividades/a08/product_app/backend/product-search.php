@@ -4,26 +4,6 @@
     // SE CREA EL ARREGLO QUE SE VA A DEVOLVER EN FORMA DE JSON
     $data = array();
 
-    if (isset($_POST['accion']) && $_POST['accion'] === 'validarNombre' && isset($_POST['nombre'])) {
-        $nombre = $conexion->real_escape_string($_POST['nombre']);
-        $sql = "SELECT COUNT(*) as count FROM productos WHERE nombre = '{$nombre}' AND eliminado = 0";
-        $result = $conexion->query($sql);
-        $data = array();
-    
-        if ($result) {
-            $row = $result->fetch_assoc();
-            $data[] = $row; // Agrega el resultado como un objeto con el conteo
-        } else {
-            $data['error'] = 'Error en la consulta.';
-        }
-    
-        $result->free();
-        $conexion->close();
-    
-        echo json_encode($data);
-        exit;
-    }
-
     // SE VERIFICA HABER RECIBIDO EL ID
     if( isset($_GET['search']) ) {
         $search = $_GET['search'];

@@ -156,7 +156,7 @@ $(document).ready(function(){
             correcto.push('Nombre válido')
         }
 
-        const marcasValidas = ['Nintendo', 'Xbox', 'Playstation'];
+        const marcasValidas = ['Garmin', 'Fitbit', 'Polar', 'Samsung', 'Huawei', 'Apple'];
         if (!finalJSON.marca || finalJSON.marca.length == 0) {
             errores.push('Selecciona una marca.');
         }
@@ -315,13 +315,13 @@ $(document).ready(function(){
         e.preventDefault();
     });
     
-    $('#form-name').keyup(function(e) {
+    $('#nombre').keyup(function(e) {
         e.preventDefault();
 
-        var name = $('#form-name').val();
+        var name = $('#nombre').val();
 
         $.ajax({
-            url: './backend/product-singleByName.php',
+            url: './backend/product-single-by-name.php',
             type: 'GET',
             data: { name: name },
             success: function(response) {
@@ -361,7 +361,6 @@ function validarNombre(){
         template_bar += `<li style="list-style: none;">El nombre debe tener como maximo 100 caracteres</li>`;
         document.getElementById("product-result").className = "card my-4 d-block";
         document.getElementById("container").innerHTML = template_bar;
-
     }
 }
 
