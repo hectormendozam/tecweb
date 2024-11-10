@@ -229,38 +229,36 @@ $(document).ready(function(){
             document.getElementById("container").innerHTML = template_bar;
         }
         else{
-        const url = edit === false ? './backend/product-add.php' : './backend/product-edit.php';
-        
-        $.post(url, postData, (response) => {
-            //console.log(response);
-            // SE OBTIENE EL OBJETO DE DATOS A PARTIR DE UN STRING JSON
-            let respuesta = JSON.parse(response);
-            // SE CREA UNA PLANTILLA PARA CREAR INFORMACIÓN DE LA BARRA DE ESTADO
-            let template_bar = '';
-            template_bar += `
-                        <li style="list-style: none;">status: ${respuesta.status}</li>
-                        <li style="list-style: none;">message: ${respuesta.message}</li>
-                    `;
-            // SE REINICIA EL FORMULARIO
-            $('#name').val('');
-            $('#description').val(JsonString);
-            // SE HACE VISIBLE LA BARRA DE ESTADO
-            $('#product-result').show();
-            // SE INSERTA LA PLANTILLA PARA LA BARRA DE ESTADO
-            $('#container').html(template_bar);
-            // SE LISTAN TODOS LOS PRODUCTOS
-            listarProductos();
-            // SE REGRESA LA BANDERA DE EDICIÓN A false
-            edit = false;
-            $('#submit-button').text('Agregar Producto');
-            $('#form-name').val('');
-            $('#form-brand').val('');
-            $('#form-model').val('');
-            $('#form-price').val('');
-            $('#form-story').val('');
-            $('#form-units').val('');
-            $('#form-img').val('');
-            $('#productId').val('');
+            $.ajax({
+                url: url,
+                type: 'POST',
+                contentType: 'application/json', // Especificar que estamos enviando JSON
+                data: JSON.stringify(finalJSON),
+
+                success: function(response) {
+                    console.log(response);
+                    let respuesta = JSON.parse(response);
+                    let template_bar = '';
+                    template_bar += `
+                                <li style="list-style: none;">status: ${respuesta.status}</li>
+                                <li style="list-style: none;">message: ${respuesta.message}</li>
+                            `;
+
+                    document.getElementById("product-result").className = "card my-4 d-block";
+                    document.getElementById("container").innerHTML = template_bar;
+
+                    listarProductos();
+                    edit = false;
+                    $('#submit-button').text('Agregar Producto');
+                    $('#name').val('');
+                    $('#marcas').val('');
+                    $('#modelo').val('');
+                    $('#precio').val('');
+                    $('#detalles').val('');
+                    $('#unidades').val('');
+                    $('#imagen').val('');
+                    $('#productId').val('');
+                }
         });
         }
     });
@@ -284,7 +282,7 @@ $(document).ready(function(){
                     document.getElementById("product-result").className = "card my-4 d-block";
                     document.getElementById("container").innerHTML = template_bar;
 
-                    listadoProductos();
+                    listarProductos();
                 }
             });
         }
@@ -315,10 +313,10 @@ $(document).ready(function(){
         e.preventDefault();
     });
     
-    $('#nombre').keyup(function(e) {
+    $('#name').keyup(function(e) {
         e.preventDefault();
 
-        var name = $('#nombre').val();
+        var name = $('#name').val();
 
         $.ajax({
             url: './backend/product-single-by-name.php',
@@ -326,7 +324,7 @@ $(document).ready(function(){
             data: { name: name },
             success: function(response) {
                 let productos = response;
-                if(productos.length > 2) {
+                if(response == name) {
                     let template_bar = '';
                     template_bar+= '<li style="list-style: none;">status: Error</li>';
                     template_bar += `<li style="list-style: none;">Ya existe este producto</li>`;
