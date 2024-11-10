@@ -5,11 +5,10 @@ use TECWEB\MYAPI\DataBase;
 require_once __DIR__ . '/DataBase.php';
 
 class Products extends DataBase {
-    private $data;
 
-    public function __construct($db, $user='root', $pass='12345678') {
+    public function __construct($db) {
         $this->data = array();
-        parent::__construct($db, $user, $pass);
+        parent::__construct($db);
     }
 
     public function add($jsonOBJ) {
