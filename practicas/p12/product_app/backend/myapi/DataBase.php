@@ -3,6 +3,7 @@ namespace TECWEB\MYAPI;
 
 abstract class DataBase {
     protected $conexion;
+    private $data;
 
     public function __construct($db, $user, $pass) {
         $this->conexion = @mysqli_connect(
@@ -21,6 +22,11 @@ abstract class DataBase {
         /*else {
             echo 'Base de datos encontrada';
         }*/
+    }
+
+    public function getData() {
+        // SE HACE LA CONVERSIÓN DE ARRAY A JSON
+        return json_encode($this->data, JSON_PRETTY_PRINT);
     }
 }
 ?>
