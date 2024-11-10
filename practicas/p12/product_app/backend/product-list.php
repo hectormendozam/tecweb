@@ -1,5 +1,5 @@
 <?php
-    use TECWEB\MYAPI\Read as Read;
+    use TECWEB\MYAPI\Read;
 
     require_once __DIR__.'/vendor/autoload.php';
 
