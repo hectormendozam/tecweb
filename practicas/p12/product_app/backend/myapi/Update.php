@@ -6,7 +6,7 @@ require_once __DIR__ . '/DataBase.php';
 
 class Update extends DataBase {
 
-    public function __construct($db, $user='root', $pass='12345678') {
+    public function __construct($db) {
         $this->data = array();
         parent::__construct($db, $user, $pass);
     }
