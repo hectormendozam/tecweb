@@ -22,43 +22,17 @@
             </genero>
         </peliculas>
         <programas>
-            <genero>
-                <nombre>Superhéroes</nombre>
-                <titulo>
-                    <nombre>Moon Knight</nombre>
-                    <duracion>1 temporada</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Peacemaker</nombre>
-                    <duracion>1 temporada</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>The Boys</nombre>
-                    <duracion>4 temporadas</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Invincible</nombre>
-                    <duracion>2 temporadas</duracion>
-                </titulo>
+            <genero nombre="Superhéroes">
+                <titulo nombre="Moon Knight" duracion="1 temporada" />
+                <titulo nombre="Peacemaker" duracion="1 temporada" />
+                <titulo nombre="The Boys" duracion="4 temporadas" />
+                <titulo nombre="Invincible" duracion="2 temporadas" />
             </genero>
-            <genero>
-                <nombre>SitCom</nombre>
-                <titulo>
-                    <nombre>The Office</nombre>
-                    <duracion>9 temporadas</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Drake &amp; Josh</nombre>
-                    <duracion>4 temporadas</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Modern Family</nombre>
-                    <duracion>11 temporadas</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>How I Met Your Mother</nombre>
-                    <duracion>9 temporadas</duracion>
-                </titulo>
+            <genero nombre="SitCom">
+                <titulo nombre="The Office" duracion="9 temporadas" />
+                <titulo nombre="Drake &amp; Josh" duracion="4 temporadas" />
+                <titulo nombre="Modern Family" duracion="11 temporadas" />
+                <titulo nombre="How I Met Your Mother" duracion="9 temporadas" />
             </genero>
         </programas>
     </contenido>
