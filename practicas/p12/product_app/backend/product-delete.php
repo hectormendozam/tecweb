@@ -1,5 +1,5 @@
 <?php
-    use TECWEB\MYAPI\Delete;
+    use TECWEB\MYAPI\Delete\Delete;
     require_once __DIR__.'/vendor/autoload.php';
 
     $productos = new Delete('marketzone');

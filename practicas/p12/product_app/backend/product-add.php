@@ -1,5 +1,5 @@
 <?php
-    use TECWEB\MYAPI\Create;
+    use TECWEB\MYAPI\Create\Create;
     require_once __DIR__.'/vendor/autoload.php';
 
     $productos = new Create('marketzone');
