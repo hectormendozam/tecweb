@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogovod>
+    <cuenta>
+        <correo>hector@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Hugo</usuario>
+                <idioma>Francés</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Ramiro</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre></nombre>
+                <titulo>
+                    <nombre></nombre>
+                    <duracion></duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre></nombre>
+                <titulo>
+                    <nombre></nombre>
+                    <duracion></duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>
