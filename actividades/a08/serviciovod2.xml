@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalogovod>
-    <cuenta>
-        <correo>hectormendoza@gmail.com</correo>
+    <cuenta correo="hector@gmail.com">
         <perfiles>
-            <perfil>
-                <usuario>Hugo</usuario>
-                <idioma>Francés</idioma>
-            </perfil>
-            <perfil>
-                <usuario>Ramiro</usuario>
-                <idioma>Español</idioma>
-            </perfil>
+            <perfil usuario="Hugo" idioma="Francés" />
+            <perfil usuario="Ramiro" idioma="Español" />
         </perfiles>
     </cuenta>
     <contenido>
