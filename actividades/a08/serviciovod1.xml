@@ -30,8 +30,8 @@
                     <duracion>1h 49min</duracion>
                 </titulo>
                 <titulo>
-                    <nombre>Ted</nombre>
-                    <duracion>1h 46min</duracion>
+                    <nombre>Scary Movie 2</nombre>
+                    <duracion>1h 23min</duracion>
                 </titulo>
             </genero>
             <genero>
@@ -43,6 +43,14 @@
                 <titulo>
                     <nombre>John Wick 2: Un nuevo día para matar</nombre>
                     <duracion>2h 2min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Rapidos y Furiosos: Reto Tokio</nombre>
+                    <duracion>1h 44min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Top Gun: Maverick</nombre>
+                    <duracion>2h 11min</duracion>
                 </titulo>
             </genero>
         </peliculas>
