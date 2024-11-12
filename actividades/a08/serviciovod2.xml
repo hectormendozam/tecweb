@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogovod>
+    <cuenta correo="hectormendoza@gmail.com">
+        <perfiles>
+            <perfil usuario="Hugo" idioma="Francés" />
+            <perfil usuario="Ramiro" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Comedia">
+                <titulo nombre="Son como niños 2" duracion="1h 41min" />
+                <titulo nombre="Ted" duracion="1h 46min" />
+                <titulo nombre="¿Y dónde están las rubias?" duracion="1h 49min" />
+                <titulo nombre="Scary Movie 2" duracion="1h 23min" />
+            </genero>
+            <genero nombre="Acción">
+                <titulo nombre="Misión Imposible: Sentencia Mortal" duracion="2h 43min" />
+                <titulo nombre="John Wick 2: Un nuevo día para matar" duracion="2h 2min" />
+                <titulo nombre="Rapidos y Furiosos: Reto Tokio" duracion="1h 44min" />
+                <titulo nombre="Top Gun: Maverick" duracion="2h 11min" />
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Superhéroes">
+                <titulo nombre="Moon Knight" duracion="1 temporada" />
+                <titulo nombre="Peacemaker" duracion="1 temporada" />
+                <titulo nombre="The Boys" duracion="4 temporadas" />
+                <titulo nombre="Invincible" duracion="2 temporadas" />
+            </genero>
+            <genero nombre="SitCom">
+                <titulo nombre="The Office" duracion="9 temporadas" />
+                <titulo nombre="Drake &amp; Josh" duracion="4 temporadas" />
+                <titulo nombre="Modern Family" duracion="11 temporadas" />
+                <titulo nombre="How I Met Your Mother" duracion="9 temporadas" />
+            </genero>
+        </programas>
+    </contenido>
+</catalogovod>
