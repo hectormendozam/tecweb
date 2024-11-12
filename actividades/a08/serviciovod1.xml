@@ -16,10 +16,25 @@
     <contenido>
         <peliculas>
             <genero>
-                <nombre></nombre>
+                <nombre>Comedia</nombre>
                 <titulo>
-                    <nombre></nombre>
-                    <duracion></duracion>
+                    <nombre>Son como niños 2</nombre>
+                    <duracion>1h 41min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Ted</nombre>
+                    <duracion>1h 46min</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Acción</nombre>
+                <titulo>
+                    <nombre>Misión Imposible: Sentencia Mortal</nombre>
+                    <duracion>2h 43min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>John Wick 2: Un nuevo día para matar</nombre>
+                    <duracion>2h 2min</duracion>
                 </titulo>
             </genero>
         </peliculas>
