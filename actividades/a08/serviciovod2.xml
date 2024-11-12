@@ -8,43 +8,17 @@
     </cuenta>
     <contenido>
         <peliculas>
-            <genero>
-                <nombre>Comedia</nombre>
-                <titulo>
-                    <nombre>Son como niños 2</nombre>
-                    <duracion>1h 41min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Ted</nombre>
-                    <duracion>1h 46min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>¿Y dónde están las rubias?</nombre>
-                    <duracion>1h 49min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Scary Movie 2</nombre>
-                    <duracion>1h 23min</duracion>
-                </titulo>
+            <genero nombre="Comedia">
+                <titulo nombre="Son como niños 2" duracion="1h 41min" />
+                <titulo nombre="Ted" duracion="1h 46min" />
+                <titulo nombre="¿Y dónde están las rubias?" duracion="1h 49min" />
+                <titulo nombre="Scary Movie 2" duracion="1h 23min" />
             </genero>
-            <genero>
-                <nombre>Acción</nombre>
-                <titulo>
-                    <nombre>Misión Imposible: Sentencia Mortal</nombre>
-                    <duracion>2h 43min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>John Wick 2: Un nuevo día para matar</nombre>
-                    <duracion>2h 2min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Rapidos y Furiosos: Reto Tokio</nombre>
-                    <duracion>1h 44min</duracion>
-                </titulo>
-                <titulo>
-                    <nombre>Top Gun: Maverick</nombre>
-                    <duracion>2h 11min</duracion>
-                </titulo>
+            <genero nombre="Acción">
+                <titulo nombre="Misión Imposible: Sentencia Mortal" duracion="2h 43min" />
+                <titulo nombre="John Wick 2: Un nuevo día para matar" duracion="2h 2min" />
+                <titulo nombre="Rapidos y Furiosos: Reto Tokio" duracion="1h 44min" />
+                <titulo nombre="Top Gun: Maverick" duracion="2h 11min" />
             </genero>
         </peliculas>
         <programas>
