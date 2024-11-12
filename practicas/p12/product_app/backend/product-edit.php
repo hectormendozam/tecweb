@@ -1,5 +1,5 @@
 <?php
-    use TECWEB\MYAPI\Update;
+    use TECWEB\MYAPI\Update\Update;
     require_once __DIR__.'/vendor/autoload.php';
 
     $productos = new Update('marketzone');
