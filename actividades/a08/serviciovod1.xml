@@ -25,6 +25,14 @@
                     <nombre>Ted</nombre>
                     <duracion>1h 46min</duracion>
                 </titulo>
+                <titulo>
+                    <nombre>¿Y dónde están las rubias?</nombre>
+                    <duracion>1h 49min</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Ted</nombre>
+                    <duracion>1h 46min</duracion>
+                </titulo>
             </genero>
             <genero>
                 <nombre>Acción</nombre>
@@ -40,7 +48,14 @@
         </peliculas>
         <programas>
             <genero>
-                <nombre></nombre>
+                <nombre>Superhéroes</nombre>
+                <titulo>
+                    <nombre></nombre>
+                    <duracion></duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>SitCom</nombre>
                 <titulo>
                     <nombre></nombre>
                     <duracion></duracion>
