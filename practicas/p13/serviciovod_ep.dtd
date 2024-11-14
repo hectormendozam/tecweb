@@ -1,4 +1,4 @@
-<!ENTITY region "MEX|USA|ESP|ARG|KOR">
+<!ENTITY regionValues "MEX|USA|ESP|ARG|KOR">
 
 <!ELEMENT catalogovod (cuenta, contenido)>
 <!ELEMENT cuenta (perfiles)>
