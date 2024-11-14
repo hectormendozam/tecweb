@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+	<tarjeta noserie="23" visitas="3" puntos="45">
+		<nombre>Hector Mendoza</nombre>
+        <correo>hector@gmail.com</correo>
+        <telefono tipo="movil">2223050837</telefono>
+	</tarjeta>
+</cinefanatico>
