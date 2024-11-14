@@ -1,4 +1,5 @@
-<!ENTITY regionValues "MEX|USA|ESP|ARG|KOR">
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % region "region (MEX | USA | ESP | ARG | KOR) 'USA'">
 
 <!ELEMENT catalogovod (cuenta, contenido)>
 <!ELEMENT cuenta (perfiles)>
@@ -11,10 +12,10 @@
 
 <!ELEMENT contenido (peliculas, series)>
 <!ELEMENT peliculas (genero+)>
-<!ATTLIST peliculas region CDATA #IMPLIED>
+<!ATTLIST peliculas %region;>
 
 <!ELEMENT series (genero+)>
-<!ATTLIST series region CDATA #IMPLIED>
+<!ATTLIST series %region;>
 
 <!ELEMENT genero (titulo+)>
 <!ATTLIST genero nombre CDATA #REQUIRED>
