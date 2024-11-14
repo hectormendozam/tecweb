@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY region "MEX|USA|ESP|ARG|KOR">
+
 <!ELEMENT catalogovod (cuenta, contenido)>
 <!ELEMENT cuenta (perfiles)>
 <!ATTLIST cuenta correo CDATA #REQUIRED>
@@ -8,9 +9,12 @@
 <!ATTLIST perfil usuario CDATA #REQUIRED
                 idioma CDATA #REQUIRED>
 
-<!ELEMENT contenido (peliculas, programas)>
+<!ELEMENT contenido (peliculas, series)>
 <!ELEMENT peliculas (genero+)>
-<!ELEMENT programas (genero+)>
+<!ATTLIST peliculas region CDATA #IMPLIED>
+
+<!ELEMENT series (genero+)>
+<!ATTLIST series region CDATA #IMPLIED>
 
 <!ELEMENT genero (titulo+)>
 <!ATTLIST genero nombre CDATA #REQUIRED>
