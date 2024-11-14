@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CatalogoVOD>
-    <cuenta correo="tony.stark@gmail.com">
+<!DOCTYPE catalogovod SYSTEM "serviciovod.dtd">
+<catalogovod>
+    <cuenta correo="hectormendoza@gmail.com">
         <perfiles>
-            <perfil usuerio="Robert Downey Jr." idioma="English"/>
-            <perfil usuerio="Chris Evans" idioma="English"/>
+            <perfil usuario="Hugo" idioma="Francés" />
+            <perfil usuario="Ramiro" idioma="Español" />
         </perfiles>
     </cuenta>
     <contenido>
         <peliculas>
-            <genero nombre="Super Héroes">
-                <titulo duracion="02:04:00">Capitán América: El primer vengador.</titulo>
-                <titulo duracion="02:06:00">Iron Man: el hombre de hierro</titulo>
+            <genero nombre="Comedia">
+                <titulo duracion="1h 41min">Son como niños 2</titulo>
+                <titulo duracion="1h 46min">Ted</titulo>
+                <titulo duracion="1h 49min">¿Y dónde están las rubias?</titulo>
+                <titulo duracion="1h 23min">Scary Movie 2</titulo>
             </genero>
-            <genero nombre="Terror">
-                <titulo duracion="01:51:00">Halloween: la noche final</titulo>
-                <titulo duracion="01:42:00">El teléfono negro</titulo>
+            <genero nombre="Acción">
+                <titulo duracion="2h 43min">Misión Imposible: Sentencia Mortal</titulo>
+                <titulo duracion="2h 2min">John Wick 2: Un nuevo día para matar</titulo>
+                <titulo duracion="1h 44min">Rapidos y Furiosos: Reto Tokio</titulo>
+                <titulo duracion="2h 11min">Top Gun: Maverick</titulo>
             </genero>
         </peliculas>
         <programas>
-            <genero nombre="Comedia">
-                <titulo duracion="00:40:00">Friends</titulo>
-                <titulo duracion="00:40:00">The Big Bang Theory</titulo>
+            <genero nombre="Superhéroes">
+                <titulo duracion="1 temporada">Moon Knight</titulo>
+                <titulo duracion="1 temporada">Peacemaker</titulo>
+                <titulo duracion="4 temporadas">The Boys</titulo> 
+                <titulo duracion="2 temporadas">Invincible</titulo> 
             </genero>
-            <genero nombre="Drama Criminal">
-                <titulo duracion="0s0:45:00">Criminal Minds</titulo>
-                <titulo duracion="00:50:00">Dahmer</titulo>
+            <genero nombre="SitCom">
+                <titulo duracion="9 temporadas">The Office</titulo> 
+                <titulo duracion="4 temporadas">Drake &amp; Josh</titulo>
+                <titulo duracion="11 temporadas">Modern Family</titulo> 
+                <titulo duracion="9 temporadas">How I Met Your Mother</titulo>
             </genero>
         </programas>
     </contenido>
-</CatalogoVOD>
+</catalogovod>
