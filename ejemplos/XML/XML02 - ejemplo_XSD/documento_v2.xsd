@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:complexType name="personaType">
+        <xsd:all>
+            <xsd:element name="nombre" type="xsd:string"/>
+        </xsd:all>
+        <xsd:attribute name="id" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="documentoType" mixed="false">
+        <xsd:all>
+            <xsd:element name="persona" type="personaType"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <xsd:element name="documento" type="documentoType"/>
+
+</xsd:schema>

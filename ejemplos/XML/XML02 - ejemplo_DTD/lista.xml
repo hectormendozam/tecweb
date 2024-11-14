@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lista SYSTEM "LISTA.dtd">
+<lista>
+    <persona sexo="hombre" id="Beatriz">
+        <nombre>Beatriz Barrientos</nombre>
+        <email>betyb@gmail.com</email>
+        <email>betyb@yahoo.com</email>
+    </persona>
+    <persona sexo="hombre" id="Alvaro">
+        <nombre>Álvaro Álvarado</nombre>
+        <email>alvaroal@gmail.com</email>
+        <relacion amigo-de="Beatriz"/>
+    </persona>
+</lista>
