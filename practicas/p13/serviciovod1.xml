@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CatalogoVOD>
+    <cuenta>
+        <correo>tony.stark@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>Robert Downey Jr.</usuario>
+                <idioma>English</idioma>
+            </perfil>
+            <perfil>
+                <usuario>Chris Evans</usuario>
+                <idioma>English</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Super Héroes</nombre>
+                <titulo>
+                    Capitán América: El primer vengador.
+                    <duracion>02:04:00</duracion>
+                </titulo>
+                <titulo>
+                    Iron Man: el hombre de hierro
+                    <duracion>02:06:00</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Terror</nombre>
+                <titulo>
+                    Halloween: la noche final
+                    <duracion>01:51:00</duracion>
+                </titulo>
+                <titulo>
+                    El teléfono negro
+                    <duracion>01:42:00</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    Friends
+                    <duracion>00:40:00</duracion>
+                </titulo>
+                <titulo>
+                    The Big Bang Theory
+                    <duracion>00:30:00</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Drama Criminal</nombre>
+                <titulo>
+                    Criminal Minds
+                    <duracion>00:45:00</duracion>
+                </titulo>
+                <titulo>
+                    Dahmer 
+                    <duracion>00:50:00</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

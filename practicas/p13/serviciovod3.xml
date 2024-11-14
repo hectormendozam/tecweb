@@ -9,7 +9,7 @@
     <contenido>
         <peliculas>
             <genero nombre="Comedia">
-                <titulo duracion="1h 41min">Son como niños 2</titulo>
+                <titulo duracion="1h 41min"><![CDATA[<video id="11">&lt;</video>]]></titulo>
                 <titulo duracion="1h 46min">Ted</titulo>
                 <titulo duracion="1h 49min">¿Y dónde están las rubias?</titulo>
                 <titulo duracion="1h 23min">Scary Movie 2</titulo>
@@ -23,7 +23,7 @@
         </peliculas>
         <programas>
             <genero nombre="Superhéroes">
-                <titulo duracion="1 temporada">Moon Knight</titulo>
+                <titulo duracion="1 temporada"><![CDATA[<video id="11">&lt;</video>]]></titulo>
                 <titulo duracion="1 temporada">Peacemaker</titulo>
                 <titulo duracion="4 temporadas">The Boys</titulo> 
                 <titulo duracion="2 temporadas">Invincible</titulo> 

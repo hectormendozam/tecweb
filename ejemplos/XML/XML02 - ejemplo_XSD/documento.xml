@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<documento xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="documento.xsd">
+    <persona id="Fulgencio">
+        <nombre>Fulgencio Menéndez</nombre>
+    </persona>    
+</documento>

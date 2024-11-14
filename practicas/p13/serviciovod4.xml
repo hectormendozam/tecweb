@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogovod SYSTEM "serviciovod_ep.dtd">
 <catalogovod>
     <cuenta correo="hectormendoza@gmail.com">
         <perfiles>
@@ -7,7 +8,7 @@
         </perfiles>
     </cuenta>
     <contenido>
-        <peliculas>
+        <peliculas region="USA">
             <genero nombre="Comedia">
                 <titulo duracion="1h 41min">Son como niños 2</titulo>
                 <titulo duracion="1h 46min">Ted</titulo>
@@ -21,7 +22,7 @@
                 <titulo duracion="2h 11min">Top Gun: Maverick</titulo>
             </genero>
         </peliculas>
-        <programas>
+        <series region ="MEX">
             <genero nombre="Superhéroes">
                 <titulo duracion="1 temporada">Moon Knight</titulo>
                 <titulo duracion="1 temporada">Peacemaker</titulo>
@@ -34,6 +35,6 @@
                 <titulo duracion="11 temporadas">Modern Family</titulo> 
                 <titulo duracion="9 temporadas">How I Met Your Mother</titulo>
             </genero>
-        </programas>
+        </series>
     </contenido>
 </catalogovod>
