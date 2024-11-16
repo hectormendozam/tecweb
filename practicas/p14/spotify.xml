@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<Spotify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="spotify.xsd">
+    <Cuenta id="1" fechaIni="2022-02-01" fechaFin="2023-02-01">
+        <Nombre>John Wick</Nombre>
+        <Correo>john011@gmail.com</Correo>
+        <Telefono>000-123-4567</Telefono>
+    </Cuenta>
+</Spotify>
