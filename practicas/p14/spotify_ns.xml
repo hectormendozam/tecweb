@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tw:Spotify xmlns:tw="http://tecnologiasweb.com.mx"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://tecnologiasweb.com.mx spotify_ns.xsd">
+    <tw:Cuenta id="1" plan="premium" fechaIni="2022-02-01" fechaFin="2023-02-01">
+        <tw:Nombre>John Wick</tw:Nombre>
+        <tw:Correo>john011@gmail.com</tw:Correo>
+        <tw:Telefono tipo="movil">000-123-4567</tw:Telefono>
+    </tw:Cuenta>
+    <tw:Cuenta id="2" plan="standard">
+        <tw:Nombre>Jane Doe</tw:Nombre>
+        <tw:Correo>jane.doe@example.com</tw:Correo>
+    </tw:Cuenta>
+    
+    <tw:Cuenta id="3" plan="basic" fechaIni="2023-03-01">
+        <tw:Nombre>Michael Scott</tw:Nombre>
+        <tw:Correo>michael.scott@dundermifflin.com</tw:Correo>
+        <tw:Telefono tipo="trabajo">123-456-7890</tw:Telefono>
+    </tw:Cuenta>
+    
+    <tw:Cuenta id="4" plan="premium" fechaIni="2023-05-15" fechaFin="2024-05-15">
+        <tw:Nombre>Pam Beesly</tw:Nombre>
+        <tw:Correo>pam.beesly@art.com</tw:Correo>
+    </tw:Cuenta>
+    
+    <tw:Cuenta id="5" plan="premium">
+        <tw:Nombre>Jim Halpert</tw:Nombre>
+        <tw:Correo>jim.halpert@pranks.com</tw:Correo>
+        <tw:Telefono tipo="movil">555-999-1234</tw:Telefono>
+    </tw:Cuenta>
+</tw:Spotify>
+
+
