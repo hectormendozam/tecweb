@@ -6,4 +6,25 @@
         <Correo>john011@gmail.com</Correo>
         <Telefono tipo="movil">000-123-4567</Telefono>
     </Cuenta>
+    <Cuenta id="2" plan="basic">
+        <Nombre>Jane Doe</Nombre>
+        <Correo>jane.doe@example.com</Correo>
+    </Cuenta>
+    
+    <Cuenta id="3" plan="basic" fechaIni="2023-03-01">
+        <Nombre>Michael Scott</Nombre>
+        <Correo>michael.scott@dundermifflin.com</Correo>
+        <Telefono tipo="trabajo">123-456-7890</Telefono>
+    </Cuenta>
+    
+    <Cuenta id="4" plan="premium" fechaIni="2023-05-15" fechaFin="2024-05-15">
+        <Nombre>Pam Beesly</Nombre>
+        <Correo>pam.beesly@art.com</Correo>
+    </Cuenta>
+    
+    <Cuenta id="5" plan="premium">
+        <Nombre>Jim Halpert</Nombre>
+        <Correo>jim.halpert@pranks.com</Correo>
+        <Telefono tipo="movil">555-999-1234</Telefono>
+    </Cuenta>
 </Spotify>

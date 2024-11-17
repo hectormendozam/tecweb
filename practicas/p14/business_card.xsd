@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
     xmlns:b="http://businesscard.org"
-    targetNamespace="http://businesscard.org" elementFormDefault="qualified">
+    targetNamespace="http://businesscard.org"
+    elementFormDefault="qualified">
     <element name="card" type="b:card_type"/>
     <element name="name" type="string"/>
     <element name="title" type="string"/>
@@ -21,4 +22,4 @@
     <complexType name="logo_type">
         <attribute ref="b:uri" use="required"/>
     </complexType>
-</schema> 
+</schema>

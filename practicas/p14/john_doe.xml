@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<b:card xmlns:b="http://businesscard.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<b:card xmlns:b="http://businesscard.org" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://businesscard.org business_card.xsd">
     <b:name>John Doe</b:name>
     <b:title>CEO, Widget Inc.</b:title>
