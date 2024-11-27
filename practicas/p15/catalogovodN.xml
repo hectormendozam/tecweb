@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE catalogovod SYSTEM "serviciovod_ep.dtd">
-<catalogovod>
+<?xml-stylesheet type="text/xsl" href="catalogovod.xsl"?>
+<catalogovod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="serviciovod.xsd">
     <cuenta correo="hectormendoza@gmail.com">
         <perfiles>
             <perfil usuario="Hugo" idioma="Francés" />
