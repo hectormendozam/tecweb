@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="links.xsl" type="text/xsl"?>
+<links>
+    <header title="Mis Sitios Favoritos"/>
+    <item href="https://www.youtube.com" title="YouTube"/>
+    <item href="http://www.milenio.com" title="Diario Milenio"/>
+    <item href="https://www.w3schools.com" title="W3Schools"/>
+    <item href="http://climate.cs.buap.mx/CondeJC/cursos" title="Climate"/>
+</links>
