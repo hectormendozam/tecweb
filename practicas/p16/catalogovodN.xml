@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogovod.xsl"?>
+<catalogovod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="serviciovod.xsd">
+    <cuenta correo="hectormendoza@gmail.com">
+        <perfiles>
+            <perfil usuario="Hugo" idioma="Francés" />
+            <perfil usuario="Ramiro" idioma="Español" />
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="USA">
+            <genero nombre="Comedia">
+                <titulo duracion="1h 41min">Son como niños 2</titulo>
+                <titulo duracion="1h 46min">Ted</titulo>
+                <titulo duracion="1h 49min">¿Y dónde están las rubias?</titulo>
+                <titulo duracion="1h 23min">Scary Movie 2</titulo>
+            </genero>
+            <genero nombre="Acción">
+                <titulo duracion="2h 43min">Misión Imposible: Sentencia Mortal</titulo>
+                <titulo duracion="2h 2min">John Wick 2: Un nuevo día para matar</titulo>
+                <titulo duracion="1h 44min">Rapidos y Furiosos: Reto Tokio</titulo>
+                <titulo duracion="2h 11min">Top Gun: Maverick</titulo>
+            </genero>
+        </peliculas>
+        <series region ="MEX">
+            <genero nombre="Superhéroes">
+                <titulo duracion="1 temporada">Moon Knight</titulo>
+                <titulo duracion="1 temporada">Peacemaker</titulo>
+                <titulo duracion="4 temporadas">The Boys</titulo> 
+                <titulo duracion="2 temporadas">Invincible</titulo> 
+            </genero>
+            <genero nombre="SitCom">
+                <titulo duracion="9 temporadas">The Office</titulo> 
+                <titulo duracion="4 temporadas">Drake &amp; Josh</titulo>
+                <titulo duracion="11 temporadas">Modern Family</titulo> 
+                <titulo duracion="9 temporadas">How I Met Your Mother</titulo>
+            </genero>
+        </series>
+    </contenido>
+</catalogovod>
